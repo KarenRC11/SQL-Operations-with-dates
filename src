@@ -1,0 +1,13 @@
+--Días transcurridos desde que el empleado entró a la empresa
+SELECT SYSDATE - start_date              
+FROM s_emp;
+
+--Se le agregan 6 meses a la fecha en que el empleado ingresó a la empresa
+SELECT last_name  "Apellido", first_name "Nombre", start_date "Fecha de inicio",                                   
+ADD_MONTHS(start_date,6) "Fecha de evaluación"                  
+FROM s_emp
+
+--Funcion Months:
+SELECT last_name, first_name,                                  
+MONTHS_BETWEEN(SYSDATE, start_date) MONTHS                  
+FROM s_emp;
